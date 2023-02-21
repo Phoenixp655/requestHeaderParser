@@ -8,7 +8,7 @@ server.use(cors({ optionsSuccessStatus: 200 })); //@ some legacy browsers choke 
 
 server.get('/api/whoami', (req, res) => {
   let requestHeader = req.headers;
-  res.json({ip: req.ip, 
+  res.json({ipaddress : req.ip, 
             language: requestHeader['accept-language'], 
             software: requestHeader['user-agent']
            })
